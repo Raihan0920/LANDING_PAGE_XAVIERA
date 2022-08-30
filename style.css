@@ -1,0 +1,582 @@
+body{
+  background-color: #004aad;
+  background-image: url(img/bgweb.png);
+  background-repeat: no-repeat;
+
+}
+.header{
+  background-color: rgba(20, 21, 83, 0.911);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header ul{
+  list-style-type: none;
+}
+.header ul li{
+  display: inline-block;
+  padding-right: 30px ;
+}
+a.nav-item active,.header a:hover{
+border: 1px solid white;
+transition: 0.5s;
+padding: 2px;
+}
+a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header ul li a:hover{
+color: rgb(0, 255, 255);
+}
+
+.content p{
+  text-align: center;
+  padding-top: 160px;
+  padding-right: 550px;
+  padding-left: 250px;
+  color: white;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium';
+}
+button{
+  position: relative;
+  left: 450px;
+  width: 150px;
+  height: 40px;
+  background: rgba(20, 21, 83, 0.911);
+  color: white;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 16px;
+  border-radius: 10px;
+}
+.about h1{
+  text-align: center;
+  color: white;
+  font-size:35px;
+  font-family: 'Franklin Gothic Medium';
+}
+.about p{
+  color: white;
+  text-align: center;
+  font-family: serif;
+  font-size: 20px;
+}
+
+
+
+.judul-produk h1{
+text-align: center;
+color: white;
+font-size:35px;
+font-family: 'Franklin Gothic Medium';
+}
+.flex{
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+font-family: "Poppins", sans-serif;
+}
+
+/*Styles for product card*/
+
+.product .product-card{
+z-index: 1;
+background: #1D212B;
+position: relative;
+width: 250px;
+height: 350px;
+margin: 30px;
+border-radius: 10px;
+}
+
+.product .product-card:before{
+content: '';
+background: rgba(255, 255, 255, 0.1);
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+
+.product .product-card .product-img{
+z-index: 1;
+position: relative;
+max-width: 220px;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.product .product-card .name{
+z-index: 2;
+color: #fff;
+position: absolute;
+width: 100%;
+text-align: center;
+bottom: 75px;
+font-size: 15px;
+letter-spacing: 1px;
+}
+
+.product .product-card .price{
+z-index: 2;
+color: #fff;
+position: absolute;
+width: 100%;
+text-align: center;
+bottom: 50px;
+font-size: 20px;
+font-weight: 300;
+}
+
+.product .product-card .popup-btn{
+z-index: 2;
+color: #fff;
+background: #555;
+position: absolute;
+bottom: 10px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 14px;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 1px;
+padding: 10px 15px;
+border-radius: 20px;
+cursor: pointer;
+}
+
+/*Styles for popup view*/
+
+.product .popup-view{
+z-index: 2;
+background: rgba(255, 255, 255, 0.5);
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+visibility: hidden;
+transition: 0.5s;
+}
+
+.product .popup-view.active{
+opacity: 1;
+visibility: visible;
+}
+
+.product .popup-card{
+position: relative;
+display: flex;
+width: 800px;
+height: 500px;
+margin: 20px;
+}
+
+.product .popup-card .product-img{
+z-index: 2;
+background: #1D212B;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 45%;
+height: 90%;
+transform: translateY(25px);
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+
+.product .popup-card .product-img img{
+z-index: 2;
+position: relative;
+width: 450px;
+left: -50px;
+}
+
+.product .popup-card .info{
+z-index: 2;
+background: #fff;
+display: flex;
+flex-direction: column;
+width: 55%;
+height: 100%;
+box-sizing: border-box;
+padding: 40px;
+border-radius: 10px;
+}
+
+.product .popup-card .close-btn{
+color: #555;
+z-index: 3;
+position: absolute;
+right: 0;
+font-size: 20px;
+margin: 20px;
+cursor: pointer;
+}
+
+.product .popup-card .info h2{
+font-size: 25px;
+line-height: 20px;
+margin: 10px;
+}
+
+.product .popup-card .info h2 span{
+font-size: 15px;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.product .popup-card .info p{
+font-size: 15px;
+margin: 10px;
+}
+
+.product .popup-card .info .price{
+font-size: 45px;
+font-weight: 300;
+margin: 10px;
+}
+
+.product .popup-card .info .add-cart-btn{
+color: #fff;
+background: #009DD2;
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+margin: 10px auto;
+padding: 10px 50px;
+border-radius: 20px;
+}
+
+.product .popup-card .info .add-wish{
+color: #009DD2;
+font-size: 16px;
+text-align: center;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+/*Responsive styles*/
+
+@media (max-width: 900px){
+.product .popup-card{
+  flex-direction: column;
+  width: 550px;
+  height: auto;
+}
+
+.product .popup-card .product-img{
+  z-index: 3;
+  width: 100%;
+  height: 200px;
+  transform: translateY(0);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product .popup-card .product-img img{
+  left: initial;
+  max-width: 100%;
+}
+
+.product .popup-card .info{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.product .popup-card .info h2{
+  margin: 20px 5px 5px 5px;
+  font-size: 25px;
+}
+
+.product .popup-card .info h2 span{
+  font-size: 10px;
+}
+
+.product .popup-card .info p{
+  margin: 5px;
+  font-size: 13px;
+}
+
+.product .popup-card .info .price{
+  margin: 5px;
+  font-size: 30px;
+}
+
+.product .popup-card .info .add-cart-btn{
+  margin: 5px auto;
+  padding: 5px 40px;
+  font-size: 14px;
+}
+
+.product .popup-card .info .add-wish{
+  font-size: 14px;
+}
+
+.product .popup-card .close-btn{
+  z-index: 4;
+}
+}
+.product .popup-btn:hover{
+  background-color: white;
+  color: blue;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+.contact h2 {
+text-align: center;
+color: white;
+font-size:35px;
+font-family: 'Franklin Gothic Medium';
+}
+
+.contact-section{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Franklin Gothic Medium';
+font-size: 30px;
+}
+
+.contact-info{
+color: #fff;
+max-width: 500px;
+line-height: 65px;
+padding-left: 50px;
+font-size: 18px;
+}
+
+.contact-info i{
+margin-right: 20px;
+font-size: 25px;
+}
+
+.contact-form{
+max-width: 700px;
+margin-right: 50px;
+}
+
+.contact-info, .contact-form{
+flex: 1;
+}
+
+.contact-form h2{
+color: #fff;
+text-align: center;
+font-size: 25px;
+text-transform: uppercase;
+margin-bottom: 30px;
+}
+
+.contact-form .text-box{
+background:white;
+color:black;
+border: none;
+width: calc(50% - 10px);
+height: 50px;
+padding: 12px;
+font-size: 15px;
+border-radius: 5px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+margin-right: 15px;
+}
+
+.contact-form textarea{
+background:white;
+color:black;
+border: none;
+width: 100%;
+padding: 12px;
+font-size: 15px;
+min-height: 200px;
+max-height: 400px;
+resize: vertical;
+border-radius: 5px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+opacity: 0.9;
+}
+
+.contact-form .send-btn{
+float: right;
+background: rgba(20, 21, 83, 0.911);
+color: #fff;
+border: none;
+width: 120px;
+height: 40px;
+font-size: 15px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 2px;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+transition-property: bacground;
+}
+
+.contact-form .send-btn:hover{
+background: #0582E3;
+}
+
+@media screen and (max-width: 950px){
+.contact-section{
+  flex-direction: column;
+}
+
+.contact-info, .contact-form{
+  margin: 30px 50px;
+}
+
+.contact-form h2{
+  font-size: 30px;
+}
+
+.contact-form .text-box{
+  width: 100%;
+}
+}
+
+/*css for alert messages*/
+
+.alert-success{
+z-index: 1;
+background: #D4EDDA;
+font-size: 18px;
+padding: 20px 40px;
+min-width: 420px;
+position: fixed;
+right: 0;
+top: 10px;
+border-left: 8px solid #3AD66E;
+border-radius: 4px;
+}
+
+.alert-error{
+z-index: 1;
+background: #FFF3CD;
+font-size: 18px;
+padding: 20px 40px;
+min-width: 420px;
+position: fixed;
+right: 0;
+top: 10px;
+border-left: 8px solid #FFA502;
+border-radius: 4px;
+}
+
+.tombol-menu {
+position: absolute;
+top: 1.7rem;
+right: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 20px;
+}
+
+.tombol-menu .garis {
+height: 3px;
+background-color: #3f72af;
+}
+
+@media screen and (max-width: 991.98px) {
+.logo a {
+    display: inline;
+}
+.tombol-menu {
+    display: flex;
+}
+nav .menu {
+    display: none;
+}
+nav .menu.active {
+    display: flex;
+}
+nav ul li {
+    width:100%;
+    border-bottom:1px solid #333333;
+}
+}
+
+
+.bg{
+background: url(backtotop.jpg)no-repeat;
+
+}
+
+/*back to top CSS*/
+
+#backtotop{
+z-index: 999;
+display: inline-block;
+position: fixed;
+visibility: hidden;
+bottom: 20px;
+right: 20px;
+width: 36px;
+height: 36px;
+line-height: 36px;
+font-size: 16px;
+text-align: center;
+opacity: .2;
+}
+
+#backtotop i{
+display: block;
+width: 100%;
+height: 100%;
+line-height: inherit;
+}
+
+#backtotop.visible{
+visibility: visible;
+opacity: .5;
+background: #0c0c0c;
+}
+
+#backtotop:hover{
+opacity: 1;
+background: #070707;
+}
